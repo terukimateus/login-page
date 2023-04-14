@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  background: rgb(174, 238, 191);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .box {
+  width: 80vw;
+  height: 80vh;
+  border-radius: 5em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 72px -4px rgba(0, 0, 0, 0.33);
+}
+.container .box .thanks {
+  display: none;
+}
+.container .box .box-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+.container .box .box-content h2 {
+  color: white;
+  font-weight: 900;
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-right: 5em;
+}
+.container .box .box-content h3 {
+  color: white;
+  margin-left: 4em;
+  font-size: 3em;
+}
+.container .box .box-content a {
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+  margin-bottom: 1em;
+  margin-right: 5em;
+}
+.container .box .box-login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+.container .box .box-login .input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3em;
+  width: 70%;
+}
+.container .box .box-login .input button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+}
+.container .box .box-login .input button:hover {
+  color: #00ff91;
+}
+.container .box .box-login .input .entrar {
+  font-size: 1.55em;
+  font-weight: 900;
+  width: 100%;
+  color: white;
+  background: linear-gradient(to left, #00ffa2 5%, #00ddff 100%);
+  height: 2em;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 1s;
+}
+.container .box .box-login .input .entrar:hover {
+  background: transparent;
+  color: black;
+}
+.container .form {
+  width: 100%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+.container .form input {
+  width: 120%;
+  height: 100%;
+  color: #0a0a0a;
+  font-size: 1.5em;
+  padding-top: 20px;
+  border: none;
+  background-color: transparent;
+}
+.container .form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(203, 203, 203);
+}
+.container .form label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #00ff91;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.container .content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+.container .form input:focus {
+  outline: none;
+}
+.container .form input:focus + .label-name .content-name,
+.container .form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  left: 0px;
+  color: #00ff91;
+}
+.container .form input:focus + .label-name::after,
+.container .form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 1200px) {
+  #box-content {
+    display: none;
+  }
+  .container .box {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    background-image: none;
+    background-size: cover;
+  }
+}/*# sourceMappingURL=styles.css.map */
